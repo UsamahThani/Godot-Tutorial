@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxlxa7tvhklkn"]
+
+[ext_resource type="Texture2D" uid="uid://bej43gegic8qk" path="res://assets/white/Clovers_2_white.png" id="1_40iha"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jwymr"]
+size = Vector2(102, 146)
+
+[node name="Card" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 9.53674e-07)
+scale = Vector2(0.156107, 0.156107)
+texture = ExtResource("1_40iha")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_jwymr")
