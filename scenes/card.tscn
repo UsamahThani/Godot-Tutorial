@@ -1,18 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://cxlxa7tvhklkn"]
+[gd_scene load_steps=4 format=3 uid="uid://cxlxa7tvhklkn"]
 
-[ext_resource type="Texture2D" uid="uid://bej43gegic8qk" path="res://assets/white/Clovers_2_white.png" id="1_40iha"]
+[ext_resource type="Script" path="res://scripts/card.gd" id="1_l2gs4"]
+[ext_resource type="Texture2D" uid="uid://d1r07jaksyxn5" path="res://assets/white/Pikes_A_white.png" id="2_u08ap"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jwymr"]
 size = Vector2(102, 146)
 
 [node name="Card" type="Node2D"]
+script = ExtResource("1_l2gs4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, 9.53674e-07)
 scale = Vector2(0.156107, 0.156107)
-texture = ExtResource("1_40iha")
+texture = ExtResource("2_u08ap")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_jwymr")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
