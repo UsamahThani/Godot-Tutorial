@@ -4,6 +4,8 @@ signal hover_in
 signal hover_out
 @onready var sprite_2d: Sprite2D = $Sprite2D
 
+var hand_position
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# set random card for sprite2D

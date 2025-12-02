@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" path="res://scripts/card_manager.gd" id="1_2cy4k"]
 [ext_resource type="PackedScene" uid="uid://dhd31f40w15oj" path="res://scenes/card_slot.tscn" id="1_f3jn6"]
-[ext_resource type="PackedScene" uid="uid://cxlxa7tvhklkn" path="res://scenes/card.tscn" id="2_m65nq"]
+[ext_resource type="Script" path="res://scripts/player_hand.gd" id="3_adu4m"]
 
 [node name="Main" type="Node2D"]
 
 [node name="CardSlot2" parent="." instance=ExtResource("1_f3jn6")]
-position = Vector2(617, 172)
+position = Vector2(618, 169)
 
 [node name="CardSlot" parent="." instance=ExtResource("1_f3jn6")]
 position = Vector2(436, 168)
@@ -15,8 +15,5 @@ position = Vector2(436, 168)
 [node name="CardManager" type="Node2D" parent="."]
 script = ExtResource("1_2cy4k")
 
-[node name="Card" parent="CardManager" instance=ExtResource("2_m65nq")]
-position = Vector2(502, 543)
-
-[node name="Card2" parent="CardManager" instance=ExtResource("2_m65nq")]
-position = Vector2(659, 547)
+[node name="PlayerHand" type="Node2D" parent="."]
+script = ExtResource("3_adu4m")
